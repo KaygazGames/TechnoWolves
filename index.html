@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>FTC Takımımız</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { padding-top: 70px; }
+  </style>
+</head>
+<body>
+  <!-- Navigasyon -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">FTC Takım</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinmeyi Aç">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Takım</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="mt-4">FTC Takımımıza Hoş Geldiniz!</h1>
+    <p>Biz robotlarla dans eden bir takımız... Yani, robotlarla yarışan bir takımız. 😎</p>
+    
+    <h2>Gelecek Etkinlikler</h2>
+    <div id="events" class="row"></div>
+  </div>
+
+  <script>
+    // Dinamik etkinlik verileri
+    const events = [
+      { title: "Turnuva Hazırlıkları", date: "2025-04-15", description: "Takımın turnuva öncesi hazırlıkları ve strateji toplantısı." },
+      { title: "Robot Gösterisi", date: "2025-05-01", description: "Robotumuzun sahne performansıyla fark yarattığı gün." }
+    ];
+    const eventsContainer = document.getElementById("events");
+    events.forEach(event => {
+      const colDiv = document.createElement("div");
+      colDiv.className = "col-md-6";
+      colDiv.innerHTML = `
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">${event.title}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${event.date}</h6>
+            <p class="card-text">${event.description}</p>
+          </div>
+        </div>
+      `;
+      eventsContainer.appendChild(colDiv);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
