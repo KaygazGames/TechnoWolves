@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Takım Üyeleri - FTC Takım</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { padding-top: 70px; }
+    .team-member { margin-bottom: 30px; }
+    .team-member img { width: 100%; border-radius: 50%; }
+  </style>
+</head>
+<body>
+  <!-- Navigasyon -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">FTC Takım</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinmeyi Aç">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+        <li class="nav-item active"><a class="nav-link" href="team.html">Takım</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="mt-4">Takım Üyelerimiz</h1>
+    <div id="team-members" class="row"></div>
+  </div>
+
+  <script>
+    // Dinamik takım üyesi verileri
+    const teamMembers = [
+      { name: "Kağan", role: "Takım Kaptanı", bio: "Robotik yarışmalarda lider", image: "https://via.placeholder.com/300?text=Kağan" },
+      { name: "Turgut", role: "Yazılım Uzmanı", bio: "Kodları hack'lemeye hazır; hata muhabbetlerine bayılır!", image: "https://via.placeholder.com/300?text=Turgut" }
+    ];
+    const teamContainer = document.getElementById("team-members");
+    teamMembers.forEach(member => {
+      const colDiv = document.createElement("div");
+      colDiv.className = "col-md-4 team-member text-center";
+      colDiv.innerHTML = `
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p><strong>${member.role}</strong></p>
+        <p>${member.bio}</p>
+      `;
+      teamContainer.appendChild(colDiv);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
