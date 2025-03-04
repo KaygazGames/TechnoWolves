@@ -2,16 +2,24 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Techno Wolves</title>
+  <title>TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body { padding-top: 70px; }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
   <!-- Navigasyon -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.html">Techno Wolves</a>
+    <a class="navbar-brand" href="index.html">
+      <!-- Logo -->
+      <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
+      TECHNO WOLVES
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
             aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinmeyi Aç">
       <span class="navbar-toggler-icon"></span>
@@ -27,19 +35,44 @@
   </nav>
 
   <div class="container">
-    <h1 class="mt-4">Techno Wolves'a Hoş Geldiniz!</h1>
-    <p>Biz robotlarla yarışan, ileri görüşlü ve esprili bir takımız. Gelin etkinliklerimize birlikte göz atalım!</p>
+    <h1 class="mt-4">TECHNO WOLVES’a Hoş Geldiniz!</h1>
+    <p>Biz robotlarla yarışan, Z kuşağı esintili, ileri görüşlü ve esprili bir takımız.  
+       Etkinlik takvimimize göz atın ve bize katılın!</p>
     
     <h2>Gelecek Etkinlikler</h2>
     <div id="events" class="row"></div>
   </div>
 
   <script>
-    // Dinamik etkinlik verileri
+    // Örnek (kurgusal) FTC etkinlik takvimi
     const events = [
-      { title: "Turnuva Hazırlıkları", date: "2025-04-15", description: "Takımın turnuva öncesi hazırlıkları ve strateji toplantısı." },
-      { title: "Robot Gösterisi", date: "2025-05-01", description: "Robotumuzun sahne performansıyla fark yarattığı gün." }
+      {
+        title: "Kickoff",
+        date: "2025-09-01",
+        description: "Sezonun başlangıcı, görev tanımları ve kuralların açıklanması."
+      },
+      {
+        title: "Robot Tasarım Aşaması",
+        date: "2025-10-01",
+        description: "Ekiple beyin fırtınası ve CAD tasarımları; yenilikçi robot fikri geliştiriliyor."
+      },
+      {
+        title: "Kodlama & Prototipleme",
+        date: "2025-11-15",
+        description: "Robot kontrol kodları yazılıyor, ilk prototip testleri yapılıyor."
+      },
+      {
+        title: "Bölgesel Turnuva",
+        date: "2025-12-20",
+        description: "Robotumuzu ilk kez sahaya sürüyoruz. Heyecan dorukta!"
+      },
+      {
+        title: "Ulusal Şampiyona",
+        date: "2026-01-10",
+        description: "En iyi robotlarla yarışma zamanı. TECHNO WOLVES gümbür gümbür geliyor!"
+      }
     ];
+
     const eventsContainer = document.getElementById("events");
     events.forEach(event => {
       const colDiv = document.createElement("div");
