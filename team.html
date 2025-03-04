@@ -2,16 +2,24 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Takım Üyeleri - Techno Wolves</title>
+  <title>Takım Üyeleri - TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body { padding-top: 70px; }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
   <!-- Navigasyon -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.html">Techno Wolves</a>
+    <a class="navbar-brand" href="index.html">
+      <!-- Logo -->
+      <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
+      TECHNO WOLVES
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
             aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinmeyi Aç">
       <span class="navbar-toggler-icon"></span>
@@ -28,11 +36,12 @@
 
   <div class="container">
     <h1 class="mt-4">Takım Üyelerimiz</h1>
+    <p>TECHNO WOLVES ekibi, her biri farklı becerilere sahip parlak zihinlerden oluşuyor.</p>
     <div id="team-members" class="mt-3"></div>
   </div>
 
   <script>
-    // Takım üyeleri, açıklama içermeyen basit liste şeklinde
+    // Takım üyeleri listesi (açıklama olmadan)
     const teamMembers = [
       "Kağan Karaiyen",
       "Turgutalp Paslanmaz",
@@ -48,11 +57,13 @@
       "Mehmet Arda Akan",
       "Derin Su Ateş"
     ];
+
     let listHTML = '<ul class="list-group">';
     teamMembers.forEach(member => {
       listHTML += `<li class="list-group-item">${member}</li>`;
     });
     listHTML += '</ul>';
+
     document.getElementById("team-members").innerHTML = listHTML;
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
