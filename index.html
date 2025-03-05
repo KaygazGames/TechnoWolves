@@ -5,7 +5,26 @@
   <title>TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body { padding-top: 70px; }
+    /* Arka plan (gradient) */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Hoş bir mor-mavi geçişi örneği */
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #333; /* Yazı rengi siyah-ton */
+    }
+
+    /* İçerik alanı için yarı saydam beyaz kutu */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.8); /* %80 saydam */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
     .navbar-brand img {
       height: 40px;
       margin-right: 10px;
@@ -34,7 +53,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container content-box">
     <h1 class="mt-4">TECHNO WOLVES’a Hoş Geldiniz!</h1>
     <p>Biz robotlarla yarışan, ileri görüşlü ve esprili bir takımız.  
        Etkinlik takvimimize göz atın ve bize katılın!</p>
