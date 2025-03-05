@@ -5,10 +5,34 @@
   <title>İletişim - TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body { padding-top: 70px; }
+    /* Genel Arka Plan */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #333;
+    }
+    /* İçerik Kutusu */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 80px;
+    }
     .navbar-brand img {
       height: 40px;
       margin-right: 10px;
+    }
+    /* E-posta bilgileri stili */
+    .email-info {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f7f7f7;
+      border-radius: 5px;
+      border: 1px solid #ddd;
     }
   </style>
 </head>
@@ -16,7 +40,6 @@
   <!-- Navigasyon -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">
-      <!-- Logo -->
       <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
       TECHNO WOLVES
     </a>
@@ -34,9 +57,10 @@
     </div>
   </nav>
 
-  <div class="container">
-    <h1 class="mt-4">İletişim</h1>
+  <div class="container content-box">
+    <h1>İletişim</h1>
     <p>Bize ulaşın, sorularınızı sorun veya etkinlikler hakkında detay isteyin. Robotlarımız kadar hızlı cevap vermeye çalışacağız!</p>
+    
     <form id="contact-form">
       <div class="form-group">
         <label for="name">İsim</label>
@@ -52,8 +76,16 @@
       </div>
       <button type="submit" class="btn btn-primary">Gönder</button>
     </form>
+    
+    <!-- E-posta Bilgilerimiz -->
+    <div class="email-info">
+      <h5>Bize Ulaşın:</h5>
+      <p>E-posta: <a href="mailto:info@technowolves.com">info@technowolves.com</a></p>
+      <p>Destek: <a href="mailto:support@technowolves.com">support@technowolves.com</a></p>
+    </div>
+    
     <div id="success-message" class="alert alert-success mt-3" style="display:none;">
-      Teşekkürler, mesajın bize ulaştı! (Mesajın, robotumuz kadar hızlı işlenecek!)
+      Teşekkürler, mesajınız bize ulaştı! (Mesajınız, robotlarımız kadar hızlı işlenecek!)
     </div>
   </div>
 
