@@ -5,26 +5,23 @@
   <title>TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    /* Arka plan (gradient) */
+    /* Genel Arka Plan */
     body {
       margin: 0;
       padding: 0;
-      /* Hoş bir mor-mavi geçişi örneği */
       background: linear-gradient(to right, #4e54c8, #8f94fb);
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
-      color: #333; /* Yazı rengi siyah-ton */
+      color: #333;
     }
-
-    /* İçerik alanı için yarı saydam beyaz kutu */
+    /* İçerik Kutusu */
     .content-box {
-      background-color: rgba(255, 255, 255, 0.8); /* %80 saydam */
+      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
       padding: 20px;
-      margin-top: 20px;
+      margin-top: 80px; /* Navbar yüksekliği göz önünde */
     }
-
     .navbar-brand img {
       height: 40px;
       margin-right: 10px;
@@ -35,7 +32,6 @@
   <!-- Navigasyon -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">
-      <!-- Logo -->
       <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
       TECHNO WOLVES
     </a>
@@ -54,7 +50,7 @@
   </nav>
 
   <div class="container content-box">
-    <h1 class="mt-4">TECHNO WOLVES’a Hoş Geldiniz!</h1>
+    <h1>TECHNO WOLVES’a Hoş Geldiniz!</h1>
     <p>Biz robotlarla yarışan, ileri görüşlü ve esprili bir takımız.  
        Etkinlik takvimimize göz atın ve bize katılın!</p>
     
@@ -63,33 +59,13 @@
   </div>
 
   <script>
-    // Örnek (kurgusal) FTC etkinlik takvimi
+    // Kurgusal FTC etkinlik takvimi
     const events = [
-      {
-        title: "Kickoff",
-        date: "2025-09-01",
-        description: "Sezonun başlangıcı, görev tanımları ve kuralların açıklanması."
-      },
-      {
-        title: "Robot Tasarım Aşaması",
-        date: "2025-10-01",
-        description: "Ekiple beyin fırtınası ve CAD tasarımları; yenilikçi robot fikri geliştiriliyor."
-      },
-      {
-        title: "Kodlama & Prototipleme",
-        date: "2025-11-15",
-        description: "Robot kontrol kodları yazılıyor, ilk prototip testleri yapılıyor."
-      },
-      {
-        title: "Bölgesel Turnuva",
-        date: "2025-12-20",
-        description: "Robotumuzu ilk kez sahaya sürüyoruz. Heyecan dorukta!"
-      },
-      {
-        title: "Ulusal Şampiyona",
-        date: "2026-01-10",
-        description: "En iyi robotlarla yarışma zamanı. TECHNO WOLVES gümbür gümbür geliyor!"
-      }
+      { title: "Kickoff", date: "2025-09-01", description: "Sezonun başlangıcı, görev tanımları ve kuralların açıklanması." },
+      { title: "Robot Tasarım Aşaması", date: "2025-10-01", description: "Ekiple beyin fırtınası ve CAD tasarımları; yenilikçi robot fikri geliştiriliyor." },
+      { title: "Kodlama & Prototipleme", date: "2025-11-15", description: "Robot kontrol kodları yazılıyor, ilk prototip testleri yapılıyor." },
+      { title: "Bölgesel Turnuva", date: "2025-12-20", description: "Robotumuzu ilk kez sahaya sürüyoruz. Heyecan dorukta!" },
+      { title: "Ulusal Şampiyona", date: "2026-01-10", description: "En iyi robotlarla yarışma zamanı. TECHNO WOLVES gümbür gümbür geliyor!" }
     ];
 
     const eventsContainer = document.getElementById("events");
