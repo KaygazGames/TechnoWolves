@@ -4,29 +4,30 @@
   <meta charset="UTF-8">
   <title>İletişim - TECHNO WOLVES</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Animate.css and AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <style>
-    /* Genel Arka Plan */
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
       background-attachment: fixed;
-      background-repeat: no-repeat;
       background-size: cover;
       color: #333;
+      font-family: 'Arial', sans-serif;
     }
-    /* İçerik Kutusu */
     .content-box {
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 80px;
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 100px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
     .navbar-brand img {
-      height: 40px;
+      height: 50px;
       margin-right: 10px;
     }
-    /* E-posta bilgileri stili */
     .email-info {
       margin-top: 20px;
       padding: 15px;
@@ -34,11 +35,17 @@
       border-radius: 5px;
       border: 1px solid #ddd;
     }
+    button.btn-primary {
+      transition: background 0.3s;
+    }
+    button.btn-primary:hover {
+      background: #343a40;
+    }
   </style>
 </head>
 <body>
-  <!-- Navigasyon -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <a class="navbar-brand" href="index.html">
       <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
       TECHNO WOLVES
@@ -48,7 +55,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
         <li class="nav-item"><a class="nav-link" href="team.html">Takım</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
@@ -58,10 +65,10 @@
   </nav>
 
   <div class="container content-box">
-    <h1>İletişim</h1>
-    <p>Bize ulaşın, sorularınızı sorun veya etkinlikler hakkında detay isteyin. Robotlarımız kadar hızlı cevap vermeye çalışacağız!</p>
+    <h1 class="mb-4 text-center" data-aos="fade-up">İletişim</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Bize ulaşın, sorularınızı iletin veya etkinlikler hakkında detay isteyin. Robotlarımız kadar hızlı cevap vermeye hazırız!</p>
     
-    <form id="contact-form">
+    <form id="contact-form" data-aos="fade-up" data-aos-delay="200">
       <div class="form-group">
         <label for="name">İsim</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Adınız" required>
@@ -77,14 +84,14 @@
       <button type="submit" class="btn btn-primary">Gönder</button>
     </form>
     
-    <!-- E-posta Bilgilerimiz -->
-    <div class="email-info">
+    <!-- E-posta Bilgileri -->
+    <div class="email-info" data-aos="fade-up" data-aos-delay="300">
       <h5>Bize Ulaşın:</h5>
-      <p>E-posta: <a href="mailto:technowolves.iletisim@outlook.com">technowolves.iletisim@outlook.com</a></p>
+      <p>E-posta: <a href="mailto:info@technowolves.com">info@technowolves.com</a></p>
       <p>Destek: <a href="mailto:support@technowolves.com">support@technowolves.com</a></p>
     </div>
     
-    <div id="success-message" class="alert alert-success mt-3" style="display:none;">
+    <div id="success-message" class="alert alert-success mt-3" style="display:none;" data-aos="fade-up" data-aos-delay="400">
       Teşekkürler, mesajınız bize ulaştı! (Mesajınız, robotlarımız kadar hızlı işlenecek!)
     </div>
   </div>
@@ -92,12 +99,15 @@
   <script>
     document.getElementById("contact-form").addEventListener("submit", function(event){
       event.preventDefault();
-      // Basit form simülasyonu: Form gönderildiğinde başarı mesajı gösterilir.
       document.getElementById("contact-form").style.display = "none";
       document.getElementById("success-message").style.display = "block";
     });
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
