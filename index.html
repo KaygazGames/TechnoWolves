@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>TECHNO WOLVES - Fibonacci Takımı & FTC Takımı</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Animate.css for entrance animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <!-- AOS for scroll animasyonları -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -19,7 +20,7 @@
       font-family: 'Arial', sans-serif;
     }
     .content-box {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
       padding: 30px;
       margin-top: 100px;
@@ -38,71 +39,70 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <a class="navbar-brand" href="index.html">
-      <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
-      TECHNO WOLVES
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinmeyi Aç">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Takım</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container content-box">
-    <div class="text-center">
-      <h1 class="animate__animated animate__fadeInDown">TECHNO WOLVES</h1>
-      <h4 class="mb-4 animate__animated animate__fadeInUp">Fibonacci Takımı & FTC Takımı</h4>
-    </div>
-    <p class="lead text-center">Yenilikçi, dinamik ve geleceğe dönük yaklaşımımızla, robotik yarışmalarda fark yaratıyoruz. Takvimimize göz atın ve bu heyecan dolu yolculukta bize katılın!</p>
-    
-    <h2 class="mt-5">Gelecek Etkinlikler</h2>
-    <div id="events" class="row mt-4"></div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <a class="navbar-brand" href="index.html">
+    <img src="assets/images/techno-wolves-logo.jpeg" alt="Techno Wolves Logo">
+    TECHNO WOLVES
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+      <li class="nav-item"><a class="nav-link" href="team.html">Takım</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsor.html">Sponsorlar</a></li>
+    </ul>
   </div>
+</nav>
 
-  <script>
-    // Örnek etkinlik takvimi (AOS animasyonları kullanılarak)
-    const events = [
-      { title: "Fibonacci İzmir", date: "15.02.2025", description: "İlk yarışmamız.Jüri özel ödülü kazanarak Türkiye Şampiyonasına gitmeye hak kazandık!" },
-      { title: "FTC Hazırlık", date: "08.04.2025", description: "FTC yarışmasına hazırlık.Takım kuruldu ve sponsor aranıyor!" },
-    ];
+<div class="container content-box">
+  <div class="text-center">
+    <h1 class="animate__animated animate__fadeInDown">TECHNO WOLVES</h1>
+    <h4 class="mb-4 animate__animated animate__fadeInUp">Fibonacci Takımı & FTC Takımı</h4>
+  </div>
+  <p class="lead text-center">Yenilikçi, dinamik ve geleceğe dönük yaklaşımımızla, robotik yarışmalarda fark yaratıyoruz. Takvimimize göz atın ve bu heyecan dolu yolculukta bize katılın!</p>
+  
+  <h2 class="mt-5">Gelecek Etkinlikler</h2>
+  <div id="events" class="row mt-4"></div>
+</div>
 
-    const eventsContainer = document.getElementById("events");
-    events.forEach((event, index) => {
-      const colDiv = document.createElement("div");
-      colDiv.className = "col-md-6 mb-4";
-      colDiv.setAttribute("data-aos", "fade-up");
-      colDiv.setAttribute("data-aos-delay", index * 100);
-      colDiv.innerHTML = `
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">${event.title}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${event.date}</h6>
-            <p class="card-text">${event.description}</p>
-          </div>
+<!-- Scriptler -->
+<script>
+  // Örnek etkinlik takvimi
+  const events = [
+    { title: "Fibonacci İzmir", date: "15.02.2025", description: "İlk yarışmamız. Jüri özel ödülü kazanarak Türkiye Şampiyonasına gitmeye hak kazandık!" },
+    { title: "FTC Hazırlık", date: "08.04.2025", description: "FTC yarışmasına hazırlık. Takım kuruldu ve sponsor aranıyor!" }
+  ];
+
+  const eventsContainer = document.getElementById("events");
+  events.forEach((event, index) => {
+    const colDiv = document.createElement("div");
+    colDiv.className = "col-md-6 mb-4";
+    colDiv.setAttribute("data-aos", "fade-up");
+    colDiv.setAttribute("data-aos-delay", index * 100);
+    colDiv.innerHTML = `
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">${event.title}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${event.date}</h6>
+          <p class="card-text">${event.description}</p>
         </div>
-      `;
-      eventsContainer.appendChild(colDiv);
-    });
-  </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
+      </div>
+    `;
+    eventsContainer.appendChild(colDiv);
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+
 </body>
 </html>
