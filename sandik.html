@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takım Sandığı - Techno Wolves</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Techno Wolves</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="ana-sponsor.html">Ana Sponsor</a></li>
+          <li class="nav-item"><a class="nav-link" href="ulasim-sponsor.html">Ulaşım Sponsoru</a></li>
+          <li class="nav-item"><a class="nav-link" href="forma-sponsor.html">Forma Sponsoru</a></li>
+          <li class="nav-item"><a class="nav-link" href="sponsorlar.html">Diğer Sponsorlar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sandik.html">Takım Sandığı</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Takım Sandığı Bölümü -->
+  <section id="takim-sandigi" class="py-5 mt-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">💰 Takım Sandığı</h2>
+      <div id="sandikMiktar" class="display-3 fw-bold text-success animate__animated animate__fadeIn"></div>
+      <p class="text-muted mt-3">Kazandığımız toplam para</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    // 💰 Takım Sandığı miktarı (TL)
+    const toplamPara = 15750; // burayı istediğin gibi güncelle
+    document.getElementById("sandikMiktar").textContent = toplamPara.toLocaleString("tr-TR") + " ₺";
+  </script>
+</body>
+</html>
